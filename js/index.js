@@ -124,8 +124,8 @@ function pesquisarClique(){
     event.preventDefault()
 
     let input = document.querySelector('#local-pesquisa')
-
-    let filtro = data.filter((dados)=>dados.namedados.includes(input.value))
+    
+    let filtro = data.filter((item)=>item.nameItem.includes(input.value))
 
     criarCardItens(filtro)
 
