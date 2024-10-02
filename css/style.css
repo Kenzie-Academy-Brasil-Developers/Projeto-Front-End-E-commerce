@@ -136,12 +136,17 @@ article{
     color: #2e245e;
 }
 .adiciona-carrinho{
-    background: transparent;
+    background: #2e245e;
+    color: white;
     border: none;
+    padding: 6px;
     cursor: pointer;
     text-align: left;
     font-size: 15px;
-    font-weight: 200;
+}
+
+.adiciona-carrinho:hover{
+    filter: brightness(110%);
 }
 
 
