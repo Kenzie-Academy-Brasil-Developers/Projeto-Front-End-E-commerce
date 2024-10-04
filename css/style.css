@@ -20,7 +20,6 @@ body{
 }
 header{
     background-color: #e8e5e5;
-    height: 20vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .container-menu{
@@ -72,12 +71,7 @@ article{
     justify-content: space-around;
 }
 
-
 /* Lista de cards */
-
-.produtos{
-    width: 865px;
-}
 
 .produtos>ul{
     display: flex;
@@ -92,7 +86,7 @@ article{
     list-style: none;
     flex-direction: column;
     background-color: #e1e3e0;
-    width: 250px;
+    max-width: 250px;
     padding: 10px;
     border: solid 3px transparent;
     height: 400px;
@@ -300,3 +294,15 @@ footer{
     width: 100%;
     height: 150px;
 }
+
+
+
+
+
+
+@media (max-width: 580px) {
+    article{
+        flex-direction: column;
+        gap: 10px;
+    }
+  }

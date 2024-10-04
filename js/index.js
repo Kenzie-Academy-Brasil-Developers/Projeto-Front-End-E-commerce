@@ -65,7 +65,6 @@ function criarCardItens(database){
 }
 
 
-
 function filtraClique(db){
 
     let filtro = document.querySelector('ul')
@@ -75,7 +74,6 @@ function filtraClique(db){
         event.preventDefault()
 
         let referencia = event.target.classList
-        
         let novaArray = []
 
         if(referencia.value == 'pretreino'){
@@ -109,9 +107,6 @@ function filtraClique(db){
 
 
 filtraClique(data)
-
-
-
 
 function pesquisarClique(){
 
@@ -263,3 +258,28 @@ function addContaItens(){
 
 
 
+function pesquisarCliqueEDigitar() {
+    let input = document.querySelector('#local-pesquisa');
+    let botaoPesquisa = document.querySelector('.botao-pesquisar');
+
+    // Função para filtrar e exibir os itens
+    const filtrarItens = () => {
+        let termoPesquisa = input.value.trim().toLowerCase();
+        
+        // Verifica se o campo de pesquisa está vazio e exibe todos os itens
+        let filtro = termoPesquisa ? data.filter((item) => 
+            item.nameItem.toLowerCase().includes(termoPesquisa)
+        ) : data;
+
+        criarCardItens(filtro);
+    };
+
+    // Pesquisa enquanto o usuário digita
+    input.addEventListener('input', filtrarItens);
+
+    // Pesquisa ao clicar no botão
+    botaoPesquisa.addEventListener('click', filtrarItens);
+}
+
+// Chama a função para ativar os eventos de pesquisa
+pesquisarCliqueEDigitar();
